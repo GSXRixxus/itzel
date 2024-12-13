@@ -1,0 +1,83 @@
+/* Fondo con imagen */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: url('fondo_link.jfif') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.5em 1.5em;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+#featured {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.featured-container {
+    display: inline-block;
+    perspective: 1000px;
+}
+
+.image-3d {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform: rotateY(0deg) translateZ(0);
+}
+
+.image-3d:hover {
+    transform: rotateY(15deg) translateZ(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    padding: 1em;
+}
+
+.gallery-item {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.2) rotateY(10deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
